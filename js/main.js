@@ -48,7 +48,7 @@ const opzioni = {
                 this.slideNumber = 0;
             }
         },
-        stopAuto() {
+        stopStartAuto() {
             if (this.autoCount == 0) {
                 this.autoCount= 1;
                 document.getElementById(`startStop`).innerHTML= "start";
