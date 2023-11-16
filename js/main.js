@@ -51,14 +51,15 @@ const opzioni = {
         stopAuto() {
             if (this.autoCount == 0) {
                 this.autoCount= 1;
-                
+                document.getElementById(`startStop`).innerHTML= "start";
                 clearInterval(this.auto);
                 
                 
                 
             } else {
-                this.autoCount== 0;
-                setInterval(this.next, 3000);
+                this.autoCount= 0;
+                document.getElementById(`startStop`).innerHTML= "stop";
+                this.auto = setInterval(this.next, 3000);
                 
 
             }
