@@ -59,7 +59,7 @@ const opzioni = {
             } else {
                 this.autoCount= 0;
                 document.getElementById(`startStop`).innerHTML= "stop";
-                this.auto = setInterval(this.next, 3000);
+                this.auto = setInterval(this.next, 2000);
                 
 
             }
@@ -69,7 +69,7 @@ const opzioni = {
 
     },
     mounted(){
-        this.auto = setInterval(this.next, 3000);
+        this.auto = setInterval(this.next, 2000);
     }
 };
 
