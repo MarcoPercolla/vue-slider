@@ -23,6 +23,8 @@ const opzioni = {
             ],
 
             slideNumber : 0,
+            autoCount : 0,
+            
 
 
         }
@@ -45,9 +47,29 @@ const opzioni = {
             } else {
                 this.slideNumber = 0;
             }
+        },
+        stopAuto() {
+            if (this.autoCount == 0) {
+                this.autoCount= 1;
+                
+                clearInterval(this.auto);
+                
+                
+                
+            } else {
+                this.autoCount== 0;
+                setInterval(this.next, 3000);
+                
+
+            }
+
+            
         }
 
     },
+    mounted(){
+        this.auto = setInterval(this.next, 3000);
+    }
 };
 
 createApp(opzioni).mount(`#app`)
